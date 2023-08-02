@@ -1,0 +1,85 @@
+
+{% extends 'base.html' %}
+{%load static %}
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  {%block content%}
+  <h1 class="text-black">Bienvenido {{user.username}}</h1>
+  
+  <div class="container-fluid mt-5">
+    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2">
+       <div class="col">
+         <div class="card" style="height:13rem">
+           <img src="{% static 'images/client.png' %}" class="img-fluid  mx-auto d-block" style="width:45%">
+           <div class="card-body text-center">
+               <a class="text-decoration-none" href="{%url 'cliente'%}" >
+                 <h5 class="card-title text-success">Clientes</h5>
+               </a>
+             <p class="card-text"></p>
+           </div>
+         </div>
+       </div>
+       <div class="col">
+        <div class="card" style="height:13rem">
+          <img src="{% static 'images/house.png' %}" class="img-fluid  mx-auto d-block" style="width:45%">
+          <div class="card-body text-center">
+              <a class="text-decoration-none" href="{%url 'propiedad'%}" >
+                <h5 class="card-title text-success">Propiedad</h5>
+              </a>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="height:13rem">
+          <img src="{%static 'images/medi.png'%}" class="img-fluid  mx-auto d-block" style="width:45%">
+          <div class="card-body text-center">
+              <a class="text-decoration-none" href="#" >
+                <h5 class="card-title text-success">Medidor</h5>
+              </a>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="height:13rem">
+          <img src="{%static 'images/lectura.png'%}" class="img-fluid  mx-auto d-block" style="width:45%">
+          <div class="card-body text-center">
+              <a class="text-decoration-none" href="#" >
+                <h5 class="card-title text-success">Lectura</h5>
+              </a>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>  
+  {%endblock%}
+  <main>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
